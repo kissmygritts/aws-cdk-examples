@@ -1,12 +1,10 @@
-# Welcome to your CDK JavaScript project!
+An example CDK app of deploying multiple services to one ECS cluster and load balancing with an application load balancer.
 
-This is a blank project for JavaScript development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app. The build step is not required when using JavaScript.
+The load balancer uses path based routing (http://example.com/path/to/service) to route traffic to the appropriate container.
 
 ## Useful commands
 
- * `npm run test`         perform the jest unit tests
+ * `cdk ls`               list the stacks that will be deployed
  * `cdk deploy`           deploy this stack to your default AWS account/region
  * `cdk diff`             compare deployed stack with current state
  * `cdk synth`            emits the synthesized CloudFormation template
