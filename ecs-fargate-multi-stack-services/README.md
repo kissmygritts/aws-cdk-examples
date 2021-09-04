@@ -8,6 +8,19 @@ The services infrastructure depends on values from the base infrastructure to:
 4. Allow traffic within the services security group
 5. Add the service to the load balancer listener as a target group
 
+## Stacks
+
+* BaseStack: creates the infrastructure the services will run on
+* ServiceStack: create the ECS service to run (create as many service stacks, changing each name as needed)
+
+Each stack is independently deployable:
+
+```shell
+cdk deploy BaseStack
+cdk deploy ServiceStack
+cdk deploy --all
+```
+
 ## Useful commands
 
  * `cdk ls`               list the stacks that will be deployed

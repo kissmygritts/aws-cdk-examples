@@ -41,7 +41,7 @@ class ServiceStack extends cdk.Stack {
       {
         cluster: props.cluster,
         taskDefinition: taskDef,
-        serviceName: 'Service:1',
+        serviceName: 'Service1',
         securityGroups: [props.servicesSecurityGroup],
         cloudMapOptions: {
           name: 'api1',
